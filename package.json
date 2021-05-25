@@ -1,0 +1,11 @@
+{
+  "name": "erc20-token2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/marcinm2h/erc20-token2021.git",
+  "author": "Marcin Moch <marcio.moch@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "truffle": "^5.3.7"
+  }
+}
