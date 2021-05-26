@@ -2,17 +2,18 @@
 
 - start dev blockchain
 ```bash
-yarn start:ganache
-```
-
-- migrate to dev
-```bash
-yarn migrate --network development
+yarn ganache
 ```
 
 - migrate to rinkeby
 ```bash
 yarn migrate --network rinkeby
+```
+
+- start dev blockhain && exec script
+```bash
+yarn ganache
+yarn migrate:dev && yarn start:dev
 ```
 
 - network console

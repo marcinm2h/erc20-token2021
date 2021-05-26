@@ -10,7 +10,7 @@ contract Utils {
     function randomNumber(uint256 range) public returns (uint256) {
         randNonce++;
         uint256 result = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, randNonce))) %
-            range;
+            range + 1;
         emit GenerateRandomNumber(result); // FIXME: for testing purposes only. Learn good practices.
 
         return result;
