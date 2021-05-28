@@ -1,7 +1,7 @@
 {
   "name": "contract",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "repository": "https://github.com/marcinm2h/erc20-token2021.git",
   "author": "marcinm2h",
   "license": "MIT",
