@@ -7,18 +7,18 @@ yarn ganache
 
 - migrate to rinkeby
 ```bash
-yarn migrate --network rinkeby
+yarn workspace contract migrate --network rinkeby
 ```
 
 - start dev blockhain && exec script
 ```bash
-yarn ganache
-yarn migrate:dev && yarn start:dev
+yarn workspace contract ganache
+yarn workspace contract migrate:dev && yarn workspace contract start:dev
 ```
 
 - network console
 ```bash
-yarn truffle console --network rinkeby
+yarn workspace contract truffle console --network rinkeby
 ```
 
 ```bash
