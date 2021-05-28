@@ -17,7 +17,6 @@
   },
   "scripts": {
     "build": "parcel build src/index.html --no-source-maps",
-    "start": "parcel src/index.html",
-    "start:watch": "parcel src/index.html --watch"
+    "start": "parcel src/index.html"
   }
 }
