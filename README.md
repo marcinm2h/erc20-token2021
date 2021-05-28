@@ -22,8 +22,7 @@ yarn truffle console --network rinkeby
 ```
 
 ```bash
-truffle(rinkeby)> var accounts;
-truffle(rinkeby)> web3.eth.getAccounts(function(err,res) { accounts = res; });
+truffle(rinkeby)> await web3.eth.getAccounts();
 truffle(rinkeby)> token2021.balanceOf(accounts[0])
 BN { negative: 0, words: [ 0, <1 empty item> ], length: 1, red: null }
 truffle(rinkeby)> token2021.claim()

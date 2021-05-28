@@ -10,10 +10,10 @@ module.exports = {
     },
     rinkeby: {
       provider: () =>
-        new HDWalletProvider(
-          process.env.MNEMONIC,
-          `https://eth-rinkeby.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`
-        ),
+        new HDWalletProvider({
+          mnemonic: process.env.MNEMONIC,
+          providerOrUrl: `https://eth-rinkeby.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+        }),
       network_id: 4,
       gasPrice: 10e9,
       skipDryRun: true,
@@ -28,14 +28,6 @@ module.exports = {
   compilers: {
     solc: {
       version: "0.8.0",
-      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
-      //  evmVersion: "byzantium"
-      // }
     },
   },
 
