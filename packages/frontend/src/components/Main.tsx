@@ -130,6 +130,8 @@ const connect = async () => {
 //   updateButtons()
 // }
 
+console.log(process.env.WEBSITE_TITLE);
+
 export const Main: React.FC<any> = () => {
   const [connected, setConnected] = useState(false);
   const [accounts, setAccounts] = useState([]);
