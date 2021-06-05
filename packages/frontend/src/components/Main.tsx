@@ -143,14 +143,18 @@ export const Main: React.FC<any> = () => {
       <div>
         <button
           type="button"
-          disabled={connected}
+          disabled={connected || loading}
           onClick={(e) => {
-            // setConnected(true);
+            setLoading(true);
             connect()
               .then((accounts) => {
                 setAccounts(accounts);
+                setConnected(true);
               })
-              .catch((error) => console.log('err', error));
+              .catch((error) => {
+                setError(error);
+              })
+              .finally(() => setLoading(false));
           }}
         >
           Connect with MetaMask
