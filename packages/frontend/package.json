@@ -6,6 +6,8 @@
   "author": "marcinm2h",
   "license": "MIT",
   "dependencies": {
+    "@metamask/onboarding": "^1.0.0",
+    "ethers": "^5.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
