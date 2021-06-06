@@ -141,7 +141,8 @@ const balanceOf = async (
     ethersProvider
   );
 
-  const balance = (await contract.balanceOf(account)).toNumber();
+  const balance =
+    (await contract.balanceOf(account)).toNumber(2) / Math.pow(10, 2); // 2 -- decimals
 
   return balance;
 };
@@ -178,6 +179,25 @@ export const Main: React.FC<any> = () => {
       <h1>Main</h1>
       <hr />
       <div>
+        <button
+          type="button"
+          onClick={(e) => {
+            window.ethereum.request({
+              method: 'wallet_watchAsset',
+              params: {
+                type: 'ERC20',
+                options: {
+                  address: '0xd8EC4F3364A6d6A7a68F0FE6705E9AA92aa230b4',
+                  symbol: 'T21',
+                  decimals: 2,
+                  //       image: 'https://foo.io/token-image.svg',
+                },
+              },
+            });
+          }}
+        >
+          Add T21 token
+        </button>
         <button
           type="button"
           onClick={(e) => {
